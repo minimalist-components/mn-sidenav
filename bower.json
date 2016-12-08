@@ -1,0 +1,17 @@
+{
+  "name": "mn-sidenav",
+  "version": "0.0.1",
+  "description": "Just a sidenav component",
+  "main": [
+    "dist/mn-sidenav.css",
+    "dist/mn-sidenav.js"
+  ],
+  "authors": [
+    "Darlan Mendonça <darlanmendonca@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "document-register-element": "^1.3.0"
+  }
+}
