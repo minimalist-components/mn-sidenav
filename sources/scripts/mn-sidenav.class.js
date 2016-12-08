@@ -7,7 +7,7 @@ class MnSidenav extends HTMLElement {
   }
 
   setOpenEvents() {
-    const buttons = document.querySelectorAll(`button[sidenav="${this.id}"]`)
+    const buttons = document.querySelectorAll(`button[open-sidenav="${this.id}"]`)
     const open = this.open
     Array
       .from(buttons)
@@ -16,7 +16,7 @@ class MnSidenav extends HTMLElement {
 
   setCloseEvents() {
     const close = this.close
-    const buttons = document.querySelectorAll('button[sidenav-close]')
+    const buttons = document.querySelectorAll('button[close-sidenav]')
     Array
       .from(buttons)
       .forEach(button => button.addEventListener('click', close))
@@ -33,7 +33,7 @@ class MnSidenav extends HTMLElement {
   }
 
   open(event) {
-    const id = event.target.getAttribute('sidenav')
+    const id = event.target.getAttribute('open-sidenav')
     const sidenav = document.querySelector(`mn-sidenav#${id}`)
     sidenav.classList.add('visible')
     document.body.classList.add('mn-sidenav-visible')
@@ -41,7 +41,7 @@ class MnSidenav extends HTMLElement {
 
   close(event) {
     event.stopPropagation()
-    const clickButtonClose = event.target.getAttribute('sidenav-close')
+    const clickButtonClose = event.target.getAttribute('close-sidenav')
     const clickOutside = event.target.tagName === 'BODY'
     const sidenav = document.querySelector('mn-sidenav.visible')
 

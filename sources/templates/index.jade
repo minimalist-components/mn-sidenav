@@ -11,14 +11,14 @@ html
 body
   h1 mn-sidenav
 
-  button(sidenav='menu') show menu
-  button(sidenav='another') show another
+  button(open-sidenav='menu') show menu
+  button(open-sidenav='another') show another
 
   mn-sidenav#menu
-    button(sidenav-close) close
+    button(close-sidenav) close
 
   mn-sidenav.right#another
-    button(sidenav-close) close
+    button(close-sidenav) close
   
   script(src='vendor.js')
   script(src='mn-sidenav.js')
