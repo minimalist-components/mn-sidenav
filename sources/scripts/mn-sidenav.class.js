@@ -16,6 +16,10 @@ class MnSidenav extends HTMLElement {
 
   setCloseEvents() {
     const close = this.close
+    const buttons = document.querySelectorAll('button[sidenav-close]')
+    Array
+      .from(buttons)
+      .forEach(button => button.addEventListener('click', close))
     document.body.addEventListener('click', close)
     document.addEventListener('keyup', () => {
       const esc = event.keyCode === 27
@@ -37,7 +41,7 @@ class MnSidenav extends HTMLElement {
 
   close(event) {
     event.stopPropagation()
-    const clickButtonClose = event.target.getAttribute('data-close-sidenav')
+    const clickButtonClose = event.target.getAttribute('sidenav-close')
     const clickOutside = event.target.tagName === 'BODY'
     const sidenav = document.querySelector('mn-sidenav.visible')
 
