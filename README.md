@@ -12,4 +12,4 @@ Minimalist sidenav component, agnostic to framworks.
 bower install --save mn-sidenav
 ```
 
-Or just download the main files, located in [dist/](tree/master/dist)
+Or just download the main files, located in [dist/](https://github.com/minimalist-components/mn-sidenav/tree/master/dist)
