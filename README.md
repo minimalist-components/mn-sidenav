@@ -1,4 +1,4 @@
-# Minimalist dialog
+# mn-sidenav
 
 Minimalist sidenav component, agnostic to framworks.
 
@@ -14,9 +14,4 @@ With bower
 bower install --save mn-sidenav
 ```
 
-Or just download the main files ```dist/mn-sidenav.css, dist/mn-sidenav.js``` in your project, and make a reference to their, like:
-
-```html
-<link rel="stylesheet" href="path/to/dist/mn-sidenav.css">
-<script src="path/to/dist/mn-sidenav.js"></script>
-```
+Or just download the main files, located in [dist/](https://github.com/minimalist-components/mn-sidenav/tree/master/dist)
