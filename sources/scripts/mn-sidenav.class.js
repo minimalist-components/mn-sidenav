@@ -33,21 +33,29 @@ class MnSidenav extends HTMLElement {
   }
 
   open(event) {
-    const id = event.target.getAttribute('open-sidenav')
+    const id = event
+      ? event.target.getAttribute('open-sidenav')
+      : this.id
+
     const sidenav = document.querySelector(`mn-sidenav#${id}`)
     sidenav.classList.add('visible')
     document.body.classList.add('mn-sidenav-visible')
   }
 
   close(event) {
-    event.stopPropagation()
-    const clickButtonClose = event.target.getAttribute('close-sidenav')
-    const clickOutside = event.target.tagName === 'BODY'
-    const sidenav = document.querySelector('mn-sidenav.visible')
+    if (event) {
+      event.stopPropagation()
+      const clickButtonClose = event.target.getAttribute('close-sidenav')
+      const clickOutside = event.target.tagName === 'BODY'
+      const sidenav = document.querySelector('mn-sidenav.visible')
 
-    if ((clickButtonClose || clickOutside) && sidenav) {
+      if ((clickButtonClose || clickOutside) && sidenav) {
+        document.body.classList.remove('mn-sidenav-visible')
+        sidenav.classList.remove('visible')
+      }
+    } else {
       document.body.classList.remove('mn-sidenav-visible')
-      sidenav.classList.remove('visible')
+      this.classList.remove('visible')
     }
   }
 }
