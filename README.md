@@ -38,11 +38,13 @@ Finally to close sidenav, add to an element, the attribute `close-sidenav`, they
 ```
 
 
+And if you want add these two options to elements, use the attribute `toggle-sidenav`
+
 ### Javascript
 If you want open or close, just use the methods `open` and `close` available on `mn-sidenav` element, e.g.
 
 ```js
 const sidenav = document.querySelector('mn-sidenav#menu')
 
-sidenav.open() // or sidenav.close()
+sidenav.open() // or sidenav.close(), sidenav.toggle()
 ```
