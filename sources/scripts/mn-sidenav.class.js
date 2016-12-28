@@ -2,13 +2,24 @@ class MnSidenav extends HTMLElement {
   constructor(self) {
     self = super(self)
     this.setOpenEvents()
+    this.setToggleEvents()
     this.setCloseEvents()
     return self
+  }
+
+  setToggleEvents() {
+    const buttons = document.querySelectorAll(`button[toggle-sidenav="${this.id}"]`)
+    const toggle = this.toggle
+
+    Array
+      .from(buttons)
+      .forEach(button => button.addEventListener('click', toggle))
   }
 
   setOpenEvents() {
     const buttons = document.querySelectorAll(`button[open-sidenav="${this.id}"]`)
     const open = this.open
+
     Array
       .from(buttons)
       .forEach(button => button.addEventListener('click', open))
@@ -17,10 +28,13 @@ class MnSidenav extends HTMLElement {
   setCloseEvents() {
     const close = this.close
     const buttons = document.querySelectorAll('button[close-sidenav]')
+
     Array
       .from(buttons)
       .forEach(button => button.addEventListener('click', close))
+
     document.body.addEventListener('click', close)
+
     document.addEventListener('keyup', () => {
       const esc = event.keyCode === 27
       let isOpened = document.body.classList.contains('mn-sidenav-visible')
@@ -57,6 +71,16 @@ class MnSidenav extends HTMLElement {
       document.body.classList.remove('mn-sidenav-visible')
       this.classList.remove('visible')
     }
+  }
+
+  toggle(event) {
+    const id = event
+      ? event.target.getAttribute('toggle-sidenav')
+      : this.id
+
+    const sidenav = document.querySelector(`mn-sidenav#${id}`)
+    sidenav.classList.toggle('visible')
+    document.body.classList.toggle('mn-sidenav-visible')
   }
 }
 

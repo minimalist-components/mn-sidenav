@@ -11,11 +11,13 @@ html
 body
   h1 mn-sidenav
 
+  button(toggle-sidenav='menu') toggle menu
   button(open-sidenav='menu') show menu
   button(open-sidenav='another') show another
 
   mn-sidenav#menu
     button(close-sidenav) close
+    button(toggle-sidenav='menu') toggle menu
 
   mn-sidenav.right#another
     button(close-sidenav) close
