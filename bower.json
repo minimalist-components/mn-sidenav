@@ -1,6 +1,6 @@
 {
   "name": "mn-sidenav",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Just a sidenav component",
   "main": [
     "dist/mn-sidenav.css",
