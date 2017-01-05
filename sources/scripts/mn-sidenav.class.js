@@ -45,7 +45,7 @@ class MnSidenav extends HTMLElement {
       }
     })
 
-    document.addEventListener('keyup', () => {
+    document.addEventListener('keyup', event => {
       const esc = event.keyCode === 27
       const isOpened = document.body.classList.contains('mn-sidenav-visible')
 
