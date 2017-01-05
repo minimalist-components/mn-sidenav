@@ -1,3 +1,7 @@
+[![Bower version](https://badge.fury.io/bo/mn-sidenav.svg)](https://badge.fury.io/bo/mn-sidenav)
+[![Dependency Status](https://gemnasium.com/badges/github.com/minimalist-components/mn-sidenav.svg)](https://gemnasium.com/github.com/minimalist-components/mn-sidenav)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)   
+
 # mn-sidenav
 
 Minimalist sidenav component, agnostic to framworks.

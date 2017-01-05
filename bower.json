@@ -1,6 +1,6 @@
 {
   "name": "mn-sidenav",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Just a sidenav component",
   "main": [
     "dist/mn-sidenav.css",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "mn-gh-page": "^0.0.11",
-    "mn-button": "^0.0.10"
+    "mn-button": "^0.0.10",
+    "mn-table-list": "^0.0.2"
   }
 }
