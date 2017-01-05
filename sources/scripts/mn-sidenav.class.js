@@ -12,7 +12,10 @@ class MnSidenav extends HTMLElement {
 
     Array
       .from(buttons)
-      .forEach(button => button.addEventListener('click', this.toggle))
+      .forEach(button => button.addEventListener('click', event => {
+        this.toggle()
+        event.stopPropagation()
+      }))
   }
 
   setOpenEvents() {
@@ -20,7 +23,10 @@ class MnSidenav extends HTMLElement {
 
     Array
       .from(buttons)
-      .forEach(button => button.addEventListener('click', () => this.open()))
+      .forEach(button => button.addEventListener('click', event => {
+        this.open()
+        event.stopPropagation()
+      }))
   }
 
   setCloseEvents() {
@@ -28,9 +34,16 @@ class MnSidenav extends HTMLElement {
 
     Array
       .from(buttons)
-      .forEach(button => button.addEventListener('click', this.close))
+      .forEach(button => button.addEventListener('click', () => this.close()))
 
-    document.body.addEventListener('click', this.close)
+    document.addEventListener('click', event => {
+      const clickOutside = !event.target.closest('mn-sidenav')
+      const sidebarVisible = document.body.classList.contains('mn-sidenav-visible')
+
+      if (clickOutside && sidebarVisible) {
+        this.close()
+      }
+    })
 
     document.addEventListener('keyup', () => {
       const esc = event.keyCode === 27
@@ -49,21 +62,9 @@ class MnSidenav extends HTMLElement {
     document.body.classList.add('mn-sidenav-visible')
   }
 
-  close(event) {
-    if (event) {
-      event.stopPropagation()
-      const clickButtonClose = event.target.getAttribute('close-sidenav')
-      const clickOutside = event.target.tagName === 'BODY'
-      const sidenav = document.querySelector('mn-sidenav.visible')
-
-      if ((clickButtonClose || clickOutside) && sidenav) {
-        document.body.classList.remove('mn-sidenav-visible')
-        sidenav.classList.remove('visible')
-      }
-    } else {
-      document.body.classList.remove('mn-sidenav-visible')
-      this.classList.remove('visible')
-    }
+  close() {
+    document.body.classList.remove('mn-sidenav-visible')
+    this.classList.remove('visible')
   }
 
   toggle(event) {
