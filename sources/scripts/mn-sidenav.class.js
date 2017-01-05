@@ -9,35 +9,33 @@ class MnSidenav extends HTMLElement {
 
   setToggleEvents() {
     const buttons = document.querySelectorAll(`button[toggle-sidenav="${this.id}"]`)
-    const toggle = this.toggle
 
     Array
       .from(buttons)
-      .forEach(button => button.addEventListener('click', toggle))
+      .forEach(button => button.addEventListener('click', this.toggle))
   }
 
   setOpenEvents() {
     const buttons = document.querySelectorAll(`button[open-sidenav="${this.id}"]`)
-    const open = this.open
 
     Array
       .from(buttons)
-      .forEach(button => button.addEventListener('click', open))
+      .forEach(button => button.addEventListener('click', () => this.open()))
   }
 
   setCloseEvents() {
-    const close = this.close
     const buttons = document.querySelectorAll('button[close-sidenav]')
 
     Array
       .from(buttons)
-      .forEach(button => button.addEventListener('click', close))
+      .forEach(button => button.addEventListener('click', this.close))
 
-    document.body.addEventListener('click', close)
+    document.body.addEventListener('click', this.close)
 
     document.addEventListener('keyup', () => {
       const esc = event.keyCode === 27
-      let isOpened = document.body.classList.contains('mn-sidenav-visible')
+      const isOpened = document.body.classList.contains('mn-sidenav-visible')
+
       if (esc && isOpened) {
         const sidenav = document.querySelector('mn-sidenav.visible')
         document.body.classList.remove('mn-sidenav-visible')
@@ -46,13 +44,8 @@ class MnSidenav extends HTMLElement {
     })
   }
 
-  open(event) {
-    const id = event
-      ? event.target.getAttribute('open-sidenav')
-      : this.id
-
-    const sidenav = document.querySelector(`mn-sidenav#${id}`)
-    sidenav.classList.add('visible')
+  open() {
+    this.classList.add('visible')
     document.body.classList.add('mn-sidenav-visible')
   }
 
