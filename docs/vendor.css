@@ -339,7 +339,7 @@ body:before{content:'';position:fixed;top:0;left:0;width:100vw;height:100vh;opac
   text-decoration: underline;
 }
 
-@media (orientation: landscape) and (max-device-width: 599px){mn-code{font-size:.5em}}mn-code code{-webkit-overflow-scrolling:touch}
+@media (orientation: landscape) and (max-device-width: 599px){mn-code{font-size:.5em}}mn-code code{-webkit-overflow-scrolling:touch}mn-code .hljs{-webkit-user-select:none}mn-code .hljs>*{-webkit-user-select:all}mn-code .hljs>*::-moz-selection *{-webkit-user-select:none}mn-code .hljs>*::selection *{-webkit-user-select:none}
 
 /*# sourceMappingURL=mn-code.css.map */
 
