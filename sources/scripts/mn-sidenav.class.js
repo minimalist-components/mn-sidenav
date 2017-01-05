@@ -8,7 +8,7 @@ class MnSidenav extends HTMLElement {
   }
 
   setToggleEvents() {
-    const buttons = document.querySelectorAll(`button[toggle-sidenav="${this.id}"]`)
+    const buttons = document.querySelectorAll(`[toggle-sidenav="${this.id}"]`)
 
     Array
       .from(buttons)
@@ -19,7 +19,7 @@ class MnSidenav extends HTMLElement {
   }
 
   setOpenEvents() {
-    const buttons = document.querySelectorAll(`button[open-sidenav="${this.id}"]`)
+    const buttons = document.querySelectorAll(`[open-sidenav="${this.id}"]`)
 
     Array
       .from(buttons)
@@ -30,7 +30,7 @@ class MnSidenav extends HTMLElement {
   }
 
   setCloseEvents() {
-    const buttons = document.querySelectorAll('button[close-sidenav]')
+    const buttons = document.querySelectorAll('[close-sidenav]')
 
     Array
       .from(buttons)

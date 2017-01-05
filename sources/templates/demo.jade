@@ -9,6 +9,7 @@ html
   style.
 
     mn-sidenav h2 {font-weight: normal}
+    .mn-table-list .mn-item {padding: .6em 2em}
 
 body
   h2 mn-sidenav
@@ -22,11 +23,13 @@ body
         button.mn-button(open-sidenav='another') Show sidenav right
 
   mn-sidenav#menu
-    button.mn-button.raised(close-sidenav) close
-    button.mn-button.raised(toggle-sidenav='menu') toggle menu
+    .mn-table-list
+      a.mn-item(href='#' close-sidenav) Stark
+      a.mn-item(href='#' close-sidenav) Lannister
+      a.mn-item(href='#' close-sidenav) Targaryen
 
   mn-sidenav.right#another
-    button.mn-button.raised(close-sidenav) close
+    button.mn-button.action(close-sidenav): .zmdi-close
 
   .docs.layout-container
     mn-code.sh.
