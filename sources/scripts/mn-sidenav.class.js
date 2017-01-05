@@ -69,13 +69,10 @@ class MnSidenav extends HTMLElement {
     window.MnBackdrop.hide()
   }
 
-  toggle(event) {
-    const id = event
-      ? event.target.getAttribute('toggle-sidenav')
-      : this.id
-
-    const sidenav = document.querySelector(`mn-sidenav#${id}`)
-    sidenav.classList.toggle('visible')
+  toggle() {
+    this.classList.toggle('visible')
+      ? window.MnBackdrop.show()
+      : window.MnBackdrop.hide()
     document.body.classList.toggle('mn-sidenav-visible')
   }
 }
