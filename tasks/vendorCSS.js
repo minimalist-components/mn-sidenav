@@ -1,17 +1,17 @@
 import gulp from 'gulp'
 import bowerFiles from 'bower-files'
+// import minifyCss from 'gulp-minify-css'
 import concat from 'gulp-concat'
-import uglify from 'gulp-uglify'
 
-gulp.task('vendorJS', vendorJSTask)
+gulp.task('vendorCSS', vendorCSSTask)
 
-function vendorJSTask() {
+function vendorCSSTask() {
   let dependencies = bowerFiles()
-    .ext('js')
+    .ext('css')
     .files
 
   const devDependencies = bowerFiles()
-    .ext('js')
+    .ext('css')
     .dev()
     .files
 
@@ -19,7 +19,7 @@ function vendorJSTask() {
 
   return gulp
     .src(dependencies)
-    .pipe(concat('vendor.js'))
-    .pipe(uglify())
+    .pipe(concat('vendor.css'))
+    // .pipe(minifyCss({keepSpecialComments: 0}))
     .pipe(gulp.dest('./docs'))
 }

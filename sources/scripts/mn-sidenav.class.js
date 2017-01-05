@@ -38,7 +38,7 @@ class MnSidenav extends HTMLElement {
 
     document.addEventListener('click', event => {
       const clickOutside = !event.target.closest('mn-sidenav')
-      const sidebarVisible = document.body.classList.contains('mn-sidenav-visible')
+      const sidebarVisible = this.classList.contains('visible')
 
       if (clickOutside && sidebarVisible) {
         this.close()
@@ -60,11 +60,13 @@ class MnSidenav extends HTMLElement {
   open() {
     this.classList.add('visible')
     document.body.classList.add('mn-sidenav-visible')
+    window.MnBackdrop.show()
   }
 
   close() {
     document.body.classList.remove('mn-sidenav-visible')
     this.classList.remove('visible')
+    window.MnBackdrop.hide()
   }
 
   toggle(event) {
