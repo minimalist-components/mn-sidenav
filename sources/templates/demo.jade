@@ -1,0 +1,69 @@
+html
+  meta(name='viewport' content='width=device-width, user-scalable=no')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css')
+
+  block styles
+    link(rel='stylesheet' href='docs/vendor.css')
+    link(rel='stylesheet' href='dist/mn-sidenav.css')
+
+  style.
+
+    mn-sidenav h2 {font-weight: normal}
+
+body
+  h2 mn-sidenav
+  include github-corner
+
+  .layout-fullscreen.layout-centered
+    .layout-container
+      div.layout-row.align-center
+        button.mn-button(open-sidenav='menu') Show sidenav
+        button.mn-button(toggle-sidenav='menu') Toggle sidenav
+        button.mn-button(open-sidenav='another') Show sidenav right
+
+  mn-sidenav#menu
+    button(close-sidenav) close
+    button(toggle-sidenav='menu') toggle menu
+
+  mn-sidenav.right#another
+    button(close-sidenav) close
+
+  //- .docs.layout-container
+    mn-code.sh.
+      bower install --save mn-sidenav
+
+    p Or just download the main files, located in dist/
+
+    h3 usage
+    p Add to your html, the tag <strong class="tag">mn-sidenav</strong> and assign to it an <string class="attr">id</strong>, e.g.
+    mn-code.html.
+      <mn-sidenav id="example">
+        <!-- here goes the content of your dialog -->
+      </mn-sidenav>
+
+    p and to open this dialog, you can add to any element (we suggest a button), the attibute `open-dialog` with id as value, e.g.
+    
+    mn-code.html.
+      <!-- when click in the button, dialog will be opened -->
+      <button open-dialog="example">Open dialog</button>
+
+    p finally, to close the button, user can click outside of dialog, or press the key `esc`, but if you can add to another element, use the attribute `close-dialog`, e.g.
+    mn-code.html.
+      <!-- id of dialog dont be required -->
+      <button close-dialog>X</button>
+
+    h3 javascript
+    p If you want to use javascript to open or close a mn-sidenav, just use these methods, available directly on element, e.g.
+    mn-code.js.
+      const dialog = document.querySelector('mn-sidenav#example')
+      dialog.open() // open the dialog
+
+      setTimeout(function() {
+        dialog.close() // close the dialog
+      }, 2000) // after 2 seconds :D
+
+
+  block scripts
+    script(src='docs/vendor.js')
+    script(src='dist/mn-sidenav.js')
+

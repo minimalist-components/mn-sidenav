@@ -1,28 +1,9 @@
-html
-  meta(name='viewport' content='width=device-width, user-scalable=no')
-  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
+extends demo
 
-  link(rel='stylesheet' href='docs/vendor.css')
-  link(rel='stylesheet' href='dist/mn-sidenav.css')
-  style.
-    body {
-      font-family: 'Open Sans', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-body
-  h1 mn-sidenav
+block styles
+  link(rel='stylesheet' href='https://rawgit.com/minimalist-components/mn-sidenav/master/docs/vendor.css')
+  link(rel='stylesheet' href='https://rawgit.com/minimalist-components/mn-sidenav/master/dist/mn-sidenav.css')
 
-  button(toggle-sidenav='menu') toggle menu
-  button(open-sidenav='menu') show menu
-  button(open-sidenav='another') show another
-
-  mn-sidenav#menu
-    button(close-sidenav) close
-    button(toggle-sidenav='menu') toggle menu
-
-  mn-sidenav.right#another
-    button(close-sidenav) close
-  
-  script(src='docs/vendor.js')
-  script(src='dist/mn-sidenav.js')
-
+block scripts
+  script(src='https://rawgit.com/minimalist-components/mn-sidenav/master/docs/vendor.js')
+  script(src='https://rawgit.com/minimalist-components/mn-sidenav/master/dist/mn-sidenav.js')
