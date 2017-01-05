@@ -6,9 +6,7 @@
 
 Minimalist sidenav component, agnostic to framworks.
 
-<!-- See the [demo](http://codepen.io/darlanmendonca/full/JRGoxv) -->
-
-<!-- [![preview demo](https://raw.githubusercontent.com/minimalist-components/mn-sidenav/master/sources/example/mn-sidenav.gif)](http://codepen.io/darlanmendonca/full/akgXQq)  -->
+See the [demo](https://minimalist-components.github.io/mn-sidenav/)
 
 ### Install
 
