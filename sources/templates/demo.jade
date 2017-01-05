@@ -28,39 +28,41 @@ body
   mn-sidenav.right#another
     button.mn-button.raised(close-sidenav) close
 
-  //- .docs.layout-container
+  .docs.layout-container
     mn-code.sh.
       bower install --save mn-sidenav
 
     p Or just download the main files, located in dist/
 
     h3 usage
-    p Add to your html, the tag <strong class="tag">mn-sidenav</strong> and assign to it an <string class="attr">id</strong>, e.g.
+    p At the end of the body, add the tag `mn-sidenav`, with an id and content
     mn-code.html.
-      <mn-sidenav id="example">
-        <!-- here goes the content of your dialog -->
+      <mn-sidenav id="menu">
+        <!-- content here -->
       </mn-sidenav>
 
-    p and to open this dialog, you can add to any element (we suggest a button), the attibute `open-dialog` with id as value, e.g.
+    p And to another element show the sidenav, just add the attribute `open-sidenav` with the id of sidenav
     
     mn-code.html.
       <!-- when click in the button, dialog will be opened -->
       <button open-dialog="example">Open dialog</button>
 
-    p finally, to close the button, user can click outside of dialog, or press the key `esc`, but if you can add to another element, use the attribute `close-dialog`, e.g.
+    p Finally to close sidenav, add to an element, the attribute `close-sidenav`, they will act when you click on it.
+
     mn-code.html.
-      <!-- id of dialog dont be required -->
-      <button close-dialog>X</button>
+      <button close-sidenav>Close menu</button>
+
+    p And if you want add these two options to elements, use the attribute `toggle-sidenav`
+
+    mn-code.html.
+      <button toggle-sidenav="menu">Close menu</button>
 
     h3 javascript
-    p If you want to use javascript to open or close a mn-sidenav, just use these methods, available directly on element, e.g.
+    p If you want open or close, just use the methods `open`, `close` or `toggle` available on `mn-sidenav` element, e.g.
     mn-code.js.
-      const dialog = document.querySelector('mn-sidenav#example')
-      dialog.open() // open the dialog
+      const sidenav = document.querySelector('mn-sidenav#menu')
 
-      setTimeout(function() {
-        dialog.close() // close the dialog
-      }, 2000) // after 2 seconds :D
+      sidenav.open() // or sidenav.close(), sidenav.toggle()
 
 
   block scripts

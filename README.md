@@ -25,7 +25,7 @@ At the end of the body, add the tag `mn-sidenav`, with an id and content
 </mn-sidenav>
 ```
 
-And to element to display sidenav, just add the attribute `open-sidenav` with the id of sidenav
+And to another element show the sidenav, just add the attribute `open-sidenav` with the id of sidenav
 
 ```html
 <button open-sidenav="menu">Show menu</button>
@@ -37,11 +37,14 @@ Finally to close sidenav, add to an element, the attribute `close-sidenav`, they
 <button close-sidenav>Close menu</button>
 ```
 
-
 And if you want add these two options to elements, use the attribute `toggle-sidenav`
 
+```html
+<button toggle-sidenav="menu">Close menu</button>
+```
+
 ### Javascript
-If you want open or close, just use the methods `open` and `close` available on `mn-sidenav` element, e.g.
+If you want open or close, just use the methods `open`, `close` or `toggle` available on `mn-sidenav` element, e.g.
 
 ```js
 const sidenav = document.querySelector('mn-sidenav#menu')
