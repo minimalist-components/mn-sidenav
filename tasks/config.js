@@ -21,7 +21,7 @@ module.exports = {
     output: 'mn-sidenav.js',
   },
   lintScripts: [
-    './gulpfile.js',
+    './gulpfile.babel.js',
     './tasks/**/*.js',
     './sources/**/*.js',
   ],
