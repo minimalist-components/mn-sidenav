@@ -1,6 +1,7 @@
 class MnSidenav extends HTMLElement {
   constructor(self) {
     self = super(self)
+    this.classList.add('mn-card')
     this.setOpenEvents()
     this.setToggleEvents()
     this.setCloseEvents()
