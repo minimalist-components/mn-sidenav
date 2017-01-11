@@ -59,6 +59,7 @@ class MnSidenav extends HTMLElement {
   }
 
   open() {
+    this.scrollTop = 0
     this.classList.add('visible')
     document.body.classList.add('mn-sidenav-visible')
     window.MnBackdrop.show()

@@ -4,8 +4,8 @@
 </mn-code><p>Or just download the main files, located in dist/</p><h3>usage</h3><p>Use the tag <strong class="tag">mn-sidenav</strong>, with an id and content</p><mn-code class="html"><mn-sidenav id="menu">
   <!-- content here -->
 </mn-sidenav>
-</mn-code><p>And to other element show this sidenav, just use the attribute <strong>open-sidenav</strong> with the sidenav id</p><mn-code class="html"><!-- when click in the button, dialog will be opened -->
-<button open-dialog="example">Open dialog</button>
+</mn-code><p>And to other element show this sidenav, just use the attribute <strong>open-sidenav</strong> with the sidenav id</p><mn-code class="html"><!-- when click in the button, sidenav will be opened -->
+<button open-sidenav="example">Open sidenav</button>
 </mn-code><p>Finally to close sidenav, use the attribute <strong>close-sidenav</strong>.</p><mn-code class="html"><button close-sidenav>Close menu</button>
 </mn-code><p>And if you want add these two options to elements, use the attribute <strong>toggle-sidenav</strong></p><mn-code class="html"><button toggle-sidenav="menu">Close menu</button>
 </mn-code><h3>javascript</h3><p>If you want open or close, just use the methods <strong>open</strong>, <strong>close</strong> or <strong>toggle</strong> available on mn-sidenav element, e.g.</p><mn-code class="js">const sidenav = document.querySelector('mn-sidenav#menu')
