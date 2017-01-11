@@ -10,7 +10,7 @@
     "Darlan Mendonça <darlanmendonca@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://minimalist-components.github.io/mn-sidenav/",
   "dependencies": {
     "document-register-element": "^1.3.0",
     "mn-backdrop": "^0.1.0",
