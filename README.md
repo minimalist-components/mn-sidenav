@@ -19,7 +19,7 @@ Or just download the main files, located in [dist/](https://github.com/minimalis
 
 ### Usage
 
-At the end of the body, add the tag `mn-sidenav`, with an id and content
+Use the tag `mn-sidenav`, with an id and content
 
 ```html
 <mn-sidenav id="menu">
@@ -27,13 +27,13 @@ At the end of the body, add the tag `mn-sidenav`, with an id and content
 </mn-sidenav>
 ```
 
-And to another element show the sidenav, just add the attribute `open-sidenav` with the id of sidenav
+And to other element show this sidenav, just use the attribute `open-sidenav` with the sidenav id
 
 ```html
 <button open-sidenav="menu">Show menu</button>
 ```
 
-Finally to close sidenav, add to an element, the attribute `close-sidenav`, they will act when you click on it.
+Finally to close sidenav, use the attribute `close-sidenav`.
 
 ```html
 <button close-sidenav>Close menu</button>

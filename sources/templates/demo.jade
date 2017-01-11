@@ -43,24 +43,24 @@ body
     p Or just download the main files, located in dist/
 
     h3 usage
-    p At the end of the body, add the tag `mn-sidenav`, with an id and content
+    p Use the tag <strong class="tag">mn-sidenav</strong>, with an id and content
     mn-code.html.
       <mn-sidenav id="menu">
         <!-- content here -->
       </mn-sidenav>
 
-    p And to another element show the sidenav, just add the attribute `open-sidenav` with the id of sidenav
+    p And to other element show this sidenav, just use the attribute <strong>open-sidenav</strong> with the sidenav id
     
     mn-code.html.
       <!-- when click in the button, dialog will be opened -->
       <button open-dialog="example">Open dialog</button>
 
-    p Finally to close sidenav, add to an element, the attribute `close-sidenav`, they will act when you click on it.
+    p Finally to close sidenav, use the attribute <strong>close-sidenav</strong>.
 
     mn-code.html.
       <button close-sidenav>Close menu</button>
 
-    p And if you want add these two options to elements, use the attribute `toggle-sidenav`
+    p And if you want add these two options to elements, use the attribute <strong>toggle-sidenav</strong>
 
     mn-code.html.
       <button toggle-sidenav="menu">Close menu</button>

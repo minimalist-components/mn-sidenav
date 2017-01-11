@@ -1,7 +1,7 @@
 {
   "name": "mn-sidenav",
   "private": true,
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "",
   "scripts": {
     "start": "scripts/start.sh",
@@ -22,12 +22,12 @@
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
     "gulp-eslint": "^3.0.1",
-    "gulp-inject": "1.5.0",
+    "gulp-inject": "^4.2.0",
     "gulp-jade": "^1.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.3.1",
     "gulp-sync": "^0.1.4",
     "gulp-uglify": "^2.0.0",
     "require-all": "^2.0.0"

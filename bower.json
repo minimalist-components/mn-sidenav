@@ -13,8 +13,8 @@
   "homepage": "",
   "dependencies": {
     "document-register-element": "^1.3.0",
-    "mn-backdrop": "^0.0.3",
-    "mn-card": "^0.0.5"
+    "mn-backdrop": "^0.1.0",
+    "mn-card": "^0.1.0"
   },
   "devDependencies": {
     "mn-gh-page": "^0.0.12",
