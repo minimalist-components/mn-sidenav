@@ -15,7 +15,7 @@ See the [demo](https://minimalist-components.github.io/mn-sidenav/)
 ### Install
 
 ```sh
-bower install --save mn-sidenav
+npm install --save mn-sidenav
 ```
 
 And bundle dependencies and main files in [dist/](https://github.com/minimalist-components/mn-sidenav/tree/master/dist) with your preferred tool.
