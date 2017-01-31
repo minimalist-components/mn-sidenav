@@ -14,7 +14,7 @@ See the [demo](https://minimalist-components.github.io/mn-sidenav/)
 bower install --save mn-sidenav
 ```
 
-Or just download the main files, located in [dist/](https://github.com/minimalist-components/mn-sidenav/tree/master/dist)
+And bundle dependencies and main files in [dist/](https://github.com/minimalist-components/mn-sidenav/tree/master/dist) with your preferred tool.
 
 
 ### Usage
