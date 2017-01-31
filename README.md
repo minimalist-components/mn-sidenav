@@ -9,7 +9,7 @@ Minimalist sidenav component, agnostic to framworks.
 See the [demo](https://minimalist-components.github.io/mn-sidenav/)
 
 <a href="https://minimalist-components.github.io/mn-sidenav/">
-<img src="https://raw.githubusercontent.com/minimalist-components/mn-sidenav/master/preview.png">
+<img src="https://raw.githubusercontent.com/minimalist-components/mn-sidenav/master/preview.gif">
 </a>
 
 ### Install
