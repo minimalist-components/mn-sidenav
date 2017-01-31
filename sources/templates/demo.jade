@@ -15,9 +15,9 @@ body
   h2 mn-sidenav
   include github-corner
 
-  .layout-fullscreen.layout-centered
-    .layout-container
-      div.layout-row.align-center
+  .mn-layout-fullscreen.mn-layout-centered
+    .mn-layout-container
+      div.mn-layout-row.align-center
         button.mn-button(open-sidenav='menu') Show sidenav
         button.mn-button(toggle-sidenav='menu') Toggle sidenav
         button.mn-button(open-sidenav='another') Show sidenav right
@@ -36,7 +36,7 @@ body
       a.mn-item(href='#' close-sidenav) Lannister
       a.mn-item(href='#' close-sidenav) Targaryen
 
-  .docs.layout-container
+  .docs.mn-layout-container
     mn-code.sh.
       bower install --save mn-sidenav
 
