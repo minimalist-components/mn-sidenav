@@ -73,9 +73,8 @@ class MnSidenav extends HTMLElement {
 
   toggle() {
     this.classList.toggle('visible')
-      ? window.MnBackdrop.show()
-      : window.MnBackdrop.hide()
-    document.body.classList.toggle('mn-sidenav-visible')
+      ? this.open()
+      : this.close()
   }
 }
 
