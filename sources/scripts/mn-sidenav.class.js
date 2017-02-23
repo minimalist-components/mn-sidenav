@@ -9,36 +9,36 @@ class MnSidenav extends HTMLElement {
   }
 
   setToggleEvents() {
-    const buttons = document.querySelectorAll(`[toggle-sidenav="${this.id}"]`)
-
-    Array
-      .from(buttons)
-      .forEach(button => button.addEventListener('click', event => {
+    document.addEventListener('click', event => {
+      if (event.target.matches(`[toggle-sidenav="${this.id}"]`)) {
         this.toggle()
         event.stopPropagation()
-      }))
+      }
+    })
   }
 
   setOpenEvents() {
-    const buttons = document.querySelectorAll(`[open-sidenav="${this.id}"]`)
-
-    Array
-      .from(buttons)
-      .forEach(button => button.addEventListener('click', event => {
+    document.addEventListener('click', event => {
+      if (event.target.matches(`[open-sidenav="${this.id}"]`)) {
         this.open()
         event.stopPropagation()
-      }))
+      }
+    })
   }
 
   setCloseEvents() {
-    const buttons = document.querySelectorAll('[close-sidenav]')
-
-    Array
-      .from(buttons)
-      .forEach(button => button.addEventListener('click', () => this.close()))
+    document.addEventListener('click', event => {
+      if (event.target.matches('button[close-sidenav]')) {
+        this.close()
+        event.stopPropagation()
+      }
+    })
 
     document.addEventListener('click', event => {
-      const clickOutside = !event.target.closest('mn-sidenav')
+      const clickOutside = !event.target.matches('[open-sidenav]')
+        && !event.target.matches('[close-sidenav]')
+        && !event.target.matches('[toggle-sidenav]')
+        && !event.target.closest('mn-sidenav')
       const sidebarVisible = this.classList.contains('visible')
 
       if (clickOutside && sidebarVisible) {
