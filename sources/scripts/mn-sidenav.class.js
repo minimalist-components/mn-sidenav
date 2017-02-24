@@ -28,7 +28,7 @@ class MnSidenav extends HTMLElement {
 
   setCloseEvents() {
     document.addEventListener('click', event => {
-      if (event.target.matches('button[close-sidenav]')) {
+      if (event.target.matches('[close-sidenav]')) {
         this.close()
         event.stopPropagation()
       }
