@@ -59,7 +59,11 @@ class MnSidenav extends HTMLElement {
   }
 
   open() {
-    this.scrollTop = 0
+    const fontSizeHTML = parseInt(window.getComputedStyle(document.body, null).getPropertyValue('font-size'))
+    const activeElement = this.querySelector('.active')
+    this.scrollTop = activeElement
+      ? activeElement.offsetTop - fontSizeHTML * 1.5
+      : 0
     this.classList.add('visible')
     document.body.classList.add('mn-sidenav-visible')
     window.MnBackdrop.show()
@@ -78,4 +82,4 @@ class MnSidenav extends HTMLElement {
   }
 }
 
-customElements.define('mn-sidenav', MnSidenav)
+window.customElements.define('mn-sidenav', MnSidenav)
