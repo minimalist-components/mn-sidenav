@@ -57,3 +57,7 @@ const sidenav = document.querySelector('mn-sidenav#menu')
 
 sidenav.open() // or sidenav.close(), sidenav.toggle()
 ```
+
+### Scroll
+
+On method open, the sidenav automatically scroll to top, or to position top of a child element with class `.active`
